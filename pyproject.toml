@@ -3,7 +3,8 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "experimenting with ocr for better results"
+name = "experimenting-with-ocr-for-better-results"
+
 version = "0.0.1"
 authors = [
   { name="OpenPecha", email="dev@openpecha.org" },
