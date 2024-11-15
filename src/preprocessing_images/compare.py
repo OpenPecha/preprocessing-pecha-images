@@ -42,5 +42,9 @@ def get_best_confidence(main_dir):
     print_best_confidence(json_data)
 
 
-main_directory = 'data/ocr_output'
-get_best_confidence(main_directory)
+def main():
+    main_directory = 'data/ocr_output'
+    get_best_confidence(main_directory)
+
+if __name__ == '__main__':
+    main()
