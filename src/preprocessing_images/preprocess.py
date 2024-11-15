@@ -24,14 +24,15 @@ def process_images_in_directory(input_directory, output_directory):
         if filename.lower().endswith(('.png', '.jpg', '.jpeg')):
             image_path = os.path.join(input_directory, filename)
             processed_image = preprocess_image(image_path)
-            processed_image_path = os.path.join(output_directory, "processed_" + filename)
+            base, ext = os.path.splitext(filename)
+            processed_image_path = os.path.join(output_directory, f"{base}_processed{ext}")
             cv2.imwrite(processed_image_path, processed_image)
             print(f"Processed image saved at: {processed_image_path}")
 
 
 def main():
-    input_directory = 'data/pecing/W1KG13126'
-    output_directory = 'data/preprocessed_images'
+    input_directory = 'data/original_pecing_images/W1KG13126'
+    output_directory = 'data/preprocessed_images/W1KG13126'
     process_images_in_directory(input_directory, output_directory)
 
 
