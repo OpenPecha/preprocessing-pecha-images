@@ -72,7 +72,7 @@ def apply_ocr_on_image(image_path, OCR_dir, lang=None):
 
 
 def ocr_images(images_dir):
-    OCR_output_root = Path("data/ocr_output/line_segemented_images")
+    OCR_output_root = Path("data/ocr_output/original")
     OCR_output_root.mkdir(parents=True, exist_ok=True)
 
     processed_folders = [sub_dir.name for sub_dir in OCR_output_root.iterdir() if sub_dir.is_dir()]
@@ -101,7 +101,7 @@ def ocr_images(images_dir):
 
 
 def main():
-    images_dir = Path("data/line_segmented_images")
+    images_dir = Path("data/original_pecing_images")
     ocr_images(images_dir)
 
 
