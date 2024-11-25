@@ -3,7 +3,8 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "project_name"
+name = "experimenting-with-ocr-for-better-results"
+
 version = "0.0.1"
 authors = [
   { name="OpenPecha", email="dev@openpecha.org" },
@@ -17,11 +18,13 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
+
 [project.optional-dependencies]
 dev = [
     "pytest",
     "pytest-cov",
     "pre-commit",
+    "opencv-python"
 ]
 
 
